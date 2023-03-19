@@ -9,4 +9,4 @@ sudo mv terraform /usr/local/bin/
 terraform --version
 terraform init
 terraform plan
-terraform apply
+terraform apply -auto-approve
