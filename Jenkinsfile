@@ -11,7 +11,7 @@
                 sh 'sudo chmod +x ./script.sh'
             }
         }
-        stage('Instalar y Ejecutar Terraform') {
+        stage('Ejecutar Script') {
             steps {
                 sh 'sudo ./script.sh'
             }
