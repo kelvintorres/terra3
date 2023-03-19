@@ -7,4 +7,4 @@ resource "docker_container" "example" {
     internal = 80
     external = 8081
   }
-} 
+}
