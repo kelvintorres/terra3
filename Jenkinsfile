@@ -1,30 +1,20 @@
-pipeline {
-  agent any
-  stages {
-    stage('terraform') {
-      steps {
-        sh '''pipeline {
+ pipeline {
     agent any
     stages {
-        stage(\'Instalar unzip\') {
+        stage('Instalar unzip') {
             steps {
-                sh \'sudo apt-get install unzip\'
+                sh 'sudo apt-get install unzip'
             }
         }
-        stage(\'Dar permisos de ejecución al script\') {
+        stage('Dar permisos de ejecución al script') {
             steps {
-                sh \'sudo chmod +x script.sh\'
+                sh 'sudo chmod +x script.sh'
             }
         }
-        stage(\'Instalar y Ejecutar Terraform\') {
+        stage('Instalar y Ejecutar Terraform') {
             steps {
-                sh \'sudo ./script.sh\'
+                sh 'sudo ./script.sh'
             }
         }
     }
-}'''
-        }
-      }
-
-    }
-  }
+}
