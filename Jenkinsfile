@@ -1,20 +1,10 @@
  pipeline {
     agent any
     stages {
-        stage('Instalar unzip') {
+        stage('comprobar docker') {
             steps {
-                sh 'apt-get install unzip'
+                sh 'docker --version'
             }
         }
-        stage('Dar permisos de ejecución al script') {
-            steps {
-                sh 'chmod +x script.sh'
-            }
-        }
-        stage('Instalar y Ejecutar Terraform') {
-            steps {
-                sh './script.sh'
-            }
-        }
-    }
+ 
 }
