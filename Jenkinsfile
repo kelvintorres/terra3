@@ -5,6 +5,6 @@
             steps {
                 sh 'docker --version'
             }
-        }
- 
+    }
+    }
 }
