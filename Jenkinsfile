@@ -19,7 +19,7 @@
                 
             }
         }
-     
+       //Aqui se copia la pagina que esta en mi repositorio de github y se envia al contenedor de docker que contiene el servidor de nginx
        stage('Enviando Pagina') {
               steps {
                   sh 'sudo docker cp index.html my-nginx-container:/usr/share/nginx/html'
