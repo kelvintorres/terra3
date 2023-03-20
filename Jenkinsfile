@@ -19,5 +19,12 @@
                 
             }
         }
+     
+       stage('Enviando Pagina') {
+              steps {
+                  sh 'sudo docker cp index.html my-nginx-container:/usr/share/nginx/html'
+
+              }
+          }
     }
 }
